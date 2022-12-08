@@ -103,28 +103,28 @@
 
 // console.log(now - 1991 > now - 2018) // you can do the above like this
 
-console.log("Operator Precedence")
+// console.log("Operator Precedence")
 
-const now = 2037
-const ageJonas = now - 1991;
-const ageSarah = now - 2018
+// const now = 2037
+// const ageJonas = now - 1991;
+// const ageSarah = now - 2018
 
-console.log(now - 1991 > now - 2018) // how does javascript know what to do first. JS knows it should first do left and then right and compare them. JS has a well defined order of operator precedence.
+// console.log(now - 1991 > now - 2018) // how does javascript know what to do first. JS knows it should first do left and then right and compare them. JS has a well defined order of operator precedence.
 
-console.log(25 - 10 - 5)
+// console.log(25 - 10 - 5)
 
-let x, y; // we can declare 2 values at the same time
+// let x, y; // we can declare 2 values at the same time
 
-x = y = 25 - 10 - 5
+// x = y = 25 - 10 - 5
 
-console.log(x, y) // x and y = 10, substraction has a 14 so will be execated first and left to right // x = y = 10 and then equal operators are executed and done right to left so x = 10, y = 10
+// console.log(x, y) // x and y = 10, substraction has a 14 so will be execated first and left to right // x = y = 10 and then equal operators are executed and done right to left so x = 10, y = 10
 
 // grouping has the highest precedence like BOMDAS
-const averageAge = (ageJonas + ageSarah) / 2 // the brackets executed first and then the division
-console.log(ageJonas, ageSarah)
-console.log(averageAge)
+// const averageAge = (ageJonas + ageSarah) / 2 // the brackets executed first and then the division
+// console.log(ageJonas, ageSarah)
+// console.log(averageAge)
 
-console.log("coding challenge")
+// console.log("coding challenge")
 // Mark and John are trying to compare their BMI (Body Mass Index), which is
 // calculated using the formula:
 // BMI = mass / height ** 2 = mass / (height * height) (mass in kg
@@ -139,22 +139,103 @@ console.log("coding challenge")
 // Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95m tall.
 // Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76m tall.
 
-console.log("Data 1")
+// console.log("Data 1")
 
-const markWeightOne = 78
-const markHeightOne = 1.69
-const johnWeightOne = 92
-const johnHeightOne = 1.95
+// const markWeightOne = 78
+// const markHeightOne = 1.69
+// const johnWeightOne = 92
+// const johnHeightOne = 1.95
 
-const markBMIOne = markWeightOne / markHeightOne ** 2
-const johnBMIOne = johnWeightOne / (johnHeightOne * johnHeightOne)
-console.log(markBMIOne, johnBMIOne)
-const markHigherBMI = markBMIOne > johnBMIOne
-console.log(markHigherBMI)
+// const markBMIOne = markWeightOne / markHeightOne ** 2
+// const johnBMIOne = johnWeightOne / (johnHeightOne * johnHeightOne)
+// console.log(markBMIOne, johnBMIOne)
+// const markHigherBMI = markBMIOne > johnBMIOne
+// console.log(markHigherBMI)
 
-function calculateBMI(weight, height) {
-  return weight / height ** 2;
-}
+// function calculateBMI(weight, height) {
+//   return weight / height ** 2;
+// }
 
-let myBMI = calculateBMI(81, 1.69)
-console.log(myBMI)
+// let myBMI = calculateBMI(markWeightOne, markHeightOne)
+// console.log(myBMI)
+
+// console.log("template literals section")
+
+// const firstName = "Angela"
+// const job = "teacher"
+// const birthYear = 1991;
+// const year = 2037
+
+// const jonas = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job
+// console.log(jonas)
+// // ES6 provides template liters that are easier than above
+
+// const jonasNew = `I'm ${firstName} a ${year - birthYear} years old ${job}`
+
+// console.log(jonasNew)
+
+// // multi-line string
+// console.log('String with \n\ new line') //old way
+// console.log(`String
+// with
+// multiple
+// line`) // new way
+
+// console.log("Decisions, If/ELSE")
+// // a program that checks if a person can get a drivers licence or not and if not eligible how many years left
+
+// const age = 15
+
+// if (age >= 18) {
+//   console.log("Sara can start driving lessons 😄")
+// } else {
+//   const yearsLeft = 18 - age
+//   console.log(`Sarah is too young. Wait another ${yearsLeft} years`)
+// }
+// called an if/else control structure as this structure allows us to have more control over how our code is executed
+
+// const birthYear = 1993
+
+// let century;
+// if (birthYear <= 2000) {
+//   century = 20
+// } else {
+//   century = 21
+// }
+// console.log(century)
+
+// console.log(`coding challenge 2`)
+
+// Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
+// Your tasks:
+// 1. Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+// 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+// Hint: Use an if/else statement 
+
+// const marksBMI = 21.3
+// const johnsBMI = 23.9
+
+// if (marksBMI >= johnsBMI) {
+//   console.log(`Mark's BMI (${marksBMI}) is higher than John's (${johnsBMI})`)
+// } else {
+//   console.log(`John's BMI (${johnsBMI}) is higher than Marks BMI (${marksBMI})`)
+// }
+
+console.log("type conversion")
+// type conversion is when we manually convert from one type to another, coercion is when JS automatically does it behind the scenes for us
+
+const inputYear = '1991'
+console.log(Number(inputYear))
+console.log(Number(inputYear) + 18) // we add Number() around the input
+
+// we can convert numbers to strings
+console.log(String(23))
+
+// we can convert to a number, to a string or to a boolean, we cannot convert to null or undefined
+
+console.log("type coercion")
+// happens whenever an operator is dealing with 2 values that have different types.
+console.log('I am ' + 23 + ' years old') // the plus operator triggers a coercion to string
+
+
+
